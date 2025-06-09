@@ -110,7 +110,8 @@ Add the following to the **GRUB_CMDLINE_LINUX_DEFAULT** line (keep the rest as i
 ```
 GRUB_CMDLINE_LINUX_DEFAULT='vfio_pci,ids=1002:744c,1002:ab30
 ```
-**Remember to change the ids to that of your own hardware that you want to passthrough**
+**Remember to change the ids to that of your own hardware that you want to passthrough**\
+also note, for intel you need to add ```intel_iommu=on```
 
 Commit the changes you made
 ```
@@ -255,7 +256,17 @@ Now simply press the "Begin installation" button and install windows 11 like you
 A note is, when your get to account setup, select Coporate/School and setup for domain\
 that way you get to install with a local account, instead of having to create an online MS account.
 
-# When windows 11 installation is done
+# When windows 11 installation is done (inside the VM)
+Goto windows update and make sure its all updated.
+
+In browser, goto https://www.looking-glass.io/downloads \
+and under the **Bleeding Edge:** section download the **Windows Host Binary** \
+install it with all defaults.
+
+## Goto AMD Radeon driver downloads and get the latest driver (or Nvidia/Intel if you got that)
+https://www.amd.com/en/support/downloads/drivers.html/graphics/radeon-rx/radeon-rx-7000-series/amd-radeon-rx-7900-xt.html
+
+
 
 
 
