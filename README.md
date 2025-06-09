@@ -50,7 +50,7 @@ yay -S looking-glass
 ```
 sudo nano /etc/libvirt/qemu.conf
 ```
-change the user and group from "root" to your username in qemu.conf (user ctrl+w to search in nano)\
+change the user and group from "root" to your username in qemu.conf (user ctrl+w to search in nano)
 ```
 user = "username"
 ```
@@ -71,17 +71,17 @@ sudo systemctl start libvirtd.service
 sudo systemctl enable --now tuned
 ```
 
-Show what profile is currentl active for tuned.\
+Show what profile is currentl active for tuned.
 ```
 tuned-adm active
 ```
 
-Set et profile to virtual-host\
+Set et profile to virtual-host
 ```
 sudo tuned-adm profile virtual-host
 ```
 
-Setup the network for qemu\
+Setup the network for qemu
 ```
 sudo virsh net-start default
 ```
