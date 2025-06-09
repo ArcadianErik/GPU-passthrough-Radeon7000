@@ -263,9 +263,31 @@ In browser, goto https://www.looking-glass.io/downloads \
 and under the **Bleeding Edge:** section download the **Windows Host Binary** \
 install it with all defaults.
 
-## Goto AMD Radeon driver downloads and get the latest driver (or Nvidia/Intel if you got that)
+### Goto AMD Radeon driver downloads and get the latest driver for windows 11 (or Nvidia/Intel if you got that)
 https://www.amd.com/en/support/downloads/drivers.html/graphics/radeon-rx/radeon-rx-7000-series/amd-radeon-rx-7900-xt.html
 
+Now ones update is compleate and looking-glass binary are installed, shutdown the VM\
+and its time to add some hardware and edit the XML.
+
+First we add the GPU hardware that we want to pass onto the windows vm.
+
+![billede](https://github.com/user-attachments/assets/5fa3d804-f884-4aed-a4b8-392b7dbd1a34)
+
+### Make sure and add both the Navi 31 GPU and Navi 31 Audio
+
+Now we add this to the XML
+
+```xml
+    <shmem name="looking-glass">
+      <model type="ivshmem-plain"/>
+      <size unit="M">128</size>
+      <address type="pci" domain="0x0000" bus="0x10" slot="0x01" function="0x0"/>
+    </shmem>
+```
+![billede](https://github.com/user-attachments/assets/fff3d735-996c-4b52-a68a-395ef73d6539)
+
+Setting the size to 128Mb cos then i can run 4k.\
+More info can be found here: https://looking-glass.io/docs/B7/ivshmem_shm/
 
 
 
