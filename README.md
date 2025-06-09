@@ -289,6 +289,26 @@ Now we add this to the XML
 Setting the size to 128Mb cos then i can run 4k.\
 More info can be found here: https://looking-glass.io/docs/B7/ivshmem_shm/
 
+### Start the VM
+And install the GPU Drivers\
+Ones done, shutdown the VM.
+
+### Now set the video to "none"
+
+![billede](https://github.com/user-attachments/assets/e93f231b-8c12-4b99-afb2-c4d9200957e3)
+
+### Start the VM and it will boot windows.
+Now it wont show a graphical console in Virtual manager.
+
+**Load up looking-glass-client** in terminal
+```
+looking-glass-client
+```
+
+If everything worked, you should see a login screen in the looking glass client
+![billede](https://github.com/user-attachments/assets/1bf0d06d-3f0a-4c8a-ac12-b075fd9df321)
+
+You can use **SCROLL Lock + F" to go fullscreen
 
 
 
