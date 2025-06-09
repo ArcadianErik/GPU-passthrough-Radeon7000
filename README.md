@@ -306,7 +306,7 @@ looking-glass-client
 ```
 
 If everything worked, you should see a login screen in the looking glass client
-![billede](https://github.com/user-attachments/assets/1bf0d06d-3f0a-4c8a-ac12-b075fd9df321)
+![billede](https://github.com/user-attachments/assets/f22e1044-d1dc-48f5-91ee-78e6f9e073a6)
 
 You can use **SCROLL Lock + F" to go fullscreen
 
