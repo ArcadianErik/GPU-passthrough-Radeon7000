@@ -53,15 +53,14 @@ change the user and group from "root" to your username in qemu.conf (user ctrl+w
 ### Enable tuned and setting it op for virtual-host.
 ```sudo systemctl enable --now tuned```
 
-Show what profile is currentl active for tuned.
+Show what profile is currentl active for tuned.\
 ```tuned-adm active```
 
-Set et profile to virtual-host
+Set et profile to virtual-host\
 ```sudo tuned-adm profile virtual-host```
 
-Setup the network for qemu
-```sudo virsh net-start default```
-
+Setup the network for qemu\
+```sudo virsh net-start default```\
 ```sudo virsh net-autostart default```
 
 Setup the user to use QEMU instead of root.
