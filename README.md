@@ -22,7 +22,7 @@ Arch installation with ZEN kernel. (im sure others work, i know Gentoo do...)\
 
 # Check IOMMU Grouping
 You can use this bash script
-```
+```bash
 #!/bin/bash
 
 for d in /sys/kernel/iommu_groups/*/devices/*; do
