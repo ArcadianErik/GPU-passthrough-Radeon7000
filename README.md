@@ -20,10 +20,18 @@ Arch installation with ZEN kernel. (im sure others work, i know Gentoo do...)
 ### Make sure your system is updated
 
 `sudo pacman -Syu`
+Install yay (if not already) so we can be bleeding edge.
 `sudo pacman -S yay`
 
 ### QEMU install with yay
 `yay -S qemu-full libvirt virt-manager bridge-utils dnsmasq iptables-nft virt-viewer edk2-ovmf swtpm qemu-img guestfs-tools libosinfo tuned`
+### Install looking-glass with yay
+`yay -S looking-glass`
+### Edit qemu.conf
+`sudo nano /etc/libvirt/qemu.conf`
+change the user and group from "root" to your username in qemu.conf (user ctrl+w to search in nano)
+`user = "username"`
+`group = "username"`
 
 ### Enable and Start the libvirtd service
 `sudo systemctl enable libvirtd.service`
