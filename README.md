@@ -5,6 +5,7 @@ Passing through a single GPU with igpu as host.
 CPU virtualization is enabled in bios.\
 a CPU with integrated grafics eg. Ryzen 7600x.\
 a discrete GPU eg. RX 7900 XT\
+GRUB as bootloader\
 Arch installation with ZEN kernel. (im sure others work, i know Gentoo do...)\
 
 ## My system specs
@@ -25,7 +26,7 @@ If your using Cachyos or other distro that defaults to fish just simply in termi
 ```
 bash
 ```
-And it will change it from fish to bash.
+And it will change it from fish to bash (you can afterwords return to fish, simply by enthering "fish".
 
 You can use this bash script to see your IOMMU groupings
 ```bash
@@ -92,10 +93,30 @@ We are looking for our grafics card groups and IDs
 IOMMU Group 16 03:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 31 [Radeon RX 7900 XT/7900 XTX/7900 GRE/7900M] [1002:744c] (rev cc)
 IOMMU Group 17 03:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 31 HDMI/DP Audio [1002:ab30]
 ```
-The group would be 16 and 17 and the ids in my case would be
+The group would be 16 and 17 (Notice that they are in different groups?\
+If yours belong to the same group, you need to patch your kernel and **that is beyond the scoop of this guide**.)
+
+And the ids in my case would be
 ```
 1002:744c and 1002:ab30
 ```
+We shall note this for use in our grub conf.
+
+### Grub configuration
+```
+sudo nano /etc/default/grub
+```
+Add the following to the **GRUB_CMDLINE_LINUX_DEFAULT** line (keep the rest as is).
+```
+GRUB_CMDLINE_LINUX_DEFAULT='vfio_pci,ids=1002:744c,1002:ab30
+```
+**Remember to change the ids to that of your own hardware that you want to passthrough**
+
+Commit the changes you made
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+**reboot** you system before continueing!
 
 Install yay (if not already) so we can be bleeding edge.
 ```
@@ -157,14 +178,9 @@ sudo virsh net-autostart default
 Setup the user to use QEMU instead of root.
 
 ```
-sudo usermod -a -G libvirt $(whoami)
+sudo usermod -a -G qemu,input,kvm,libvirt $(whoami)
 ```
-```
-sudo usermod -a -G kvm $(whoami)
-```
-```
-sudo usermod -a -G qemu $(whoami)
-```
+
 
 stff
 
