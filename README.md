@@ -21,7 +21,13 @@ Arch installation with ZEN kernel. (im sure others work, i know Gentoo do...)\
 `sudo pacman -Syu`
 
 # Check IOMMU Grouping
-You can use this bash script
+If your using Cachyos or other distro that defaults to fish just simply in therminal enter
+```
+bash
+```
+And it will change it from fish to bash.
+
+You can use this bash script to see your IOMMU groupings
 ```bash
 #!/bin/bash
 
