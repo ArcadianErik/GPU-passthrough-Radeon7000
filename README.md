@@ -1,6 +1,9 @@
 # GPU Passthrough with a Radeon 7000 series card and an iGPU
 Passing through a single GPU with igpu as host.
 
+Doing it this way, i manage to be able to use my RX 7900 XT in the VM aswell as on my main Cachyos install.
+as the main OS will render the 3D on the RX 7900 XT and pass it through my motherboads display port.
+
 ## This requires:
 CPU virtualization is enabled in bios.\
 a CPU with integrated grafics eg. Ryzen 7600x.\
@@ -310,7 +313,10 @@ If everything worked, you should see a login screen in the looking glass client
 
 You can use **SCROLL Lock + F** to go fullscreen
 
+Here are some screenshots from Shadow of the Tomb Raider Benchmark running in the VM and natively on Cachyos\
 
+Nativly in Cachyos
+![billede](https://github.com/user-attachments/assets/3205b5b0-0309-44f4-ba76-6032931c0670)
 
 
 
