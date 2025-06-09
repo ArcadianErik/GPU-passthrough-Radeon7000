@@ -213,4 +213,8 @@ Then restart the libvirtd service (or reboot system)
 sudo systemctl restart libvirtd
 ```
 
+# Now open Virtual Manager
+And create a new VM
+![billede](https://github.com/user-attachments/assets/fe2144ff-2216-4ee4-b4a6-84bb44745bca)
+
 
