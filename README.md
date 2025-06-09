@@ -181,9 +181,36 @@ Setup the user to use QEMU instead of root.
 sudo usermod -a -G qemu,input,kvm,libvirt $(whoami)
 ```
 
+# Setting up looking-glass
+Edit looking-glass.conf
+```
+sudo nano /etc/tmpfiles.d/10-looking-glass.conf
+```
+And add the follwing to it
+```
+# Type Path               Mode UID  GID Age Argument
 
-stff
+f /dev/shm/looking-glass 0660 yourusername kvm -
+```
+```
+systemd-tmpfiles --create
+```
+Or if you already created the shm looking-glass file, you prolly need to change ownership.
+```
+sudo chown username:kvm /dev/shm/looking-glass
+```
+### for easiere windows 11 installation, might need to add iptables to qemu network conf
+```
+sudo nano /etc/libvirt/network.conf
+```
+At the of end of file add this
+```
+firewall_backend = "iptables"
+```
 
-
+Then restart the libvirtd service (or reboot system)
+```
+sudo systemctl restart libvirtd
+```
 
 
