@@ -44,7 +44,7 @@ Install yay (if not already) so we can be bleeding edge.
 ```sudo nano /etc/libvirt/qemu.conf```\
 change the user and group from "root" to your username in qemu.conf (user ctrl+w to search in nano)\
 ```user = "username"```\
-```group = "username"````
+```group = "username"```
 
 ### Enable and Start the libvirtd service
 ```sudo systemctl enable libvirtd.service```\
@@ -67,8 +67,8 @@ Setup the network for qemu
 Setup the user to use QEMU instead of root.
 
 ```sudo usermod -a -G libvirt $(whoami)```\
-`sudo usermod -a -G kvm $(whoami)```\
-`sudo usermod -a -G qemu $(whoami)```
+```sudo usermod -a -G kvm $(whoami)```\
+```sudo usermod -a -G qemu $(whoami)```
 
 
 
