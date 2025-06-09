@@ -20,6 +20,18 @@ Arch installation with ZEN kernel. (im sure others work, i know Gentoo do...)\
 ### Make sure your system is updated
 `sudo pacman -Syu`
 
+# Check IOMMU Grouping
+You can use this bash script
+```
+#!/bin/bash
+
+for d in /sys/kernel/iommu_groups/*/devices/*; do
+  n=${d#*/iommu_groups/*}; n=${n%%/*}
+  printf 'IOMMU Group %s ' "$n"
+  lspci -nns "${d##*/}"
+done
+```
+
 Install yay (if not already) so we can be bleeding edge.
 `sudo pacman -S yay`
 
@@ -55,7 +67,7 @@ Setup the network for qemu
 Setup the user to use QEMU instead of root.
 
 `sudo usermod -a -G libvirt $(whoami)`\
-`sudo usermod -a -G kvm$(whoami)`\
+`sudo usermod -a -G kvm $(whoami)`\
 `sudo usermod -a -G qemu $(whoami)`
 
 
