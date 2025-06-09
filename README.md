@@ -314,9 +314,14 @@ If everything worked, you should see a login screen in the looking glass client
 You can use **SCROLL Lock + F** to go fullscreen
 
 Here are some screenshots from Shadow of the Tomb Raider Benchmark running in the VM and natively on Cachyos\
+Both times running 4K Highst setting, Shadow RayTracing Medium.
 
-Nativly in Cachyos
+Nativly in Cachyos.
+
 ![billede](https://github.com/user-attachments/assets/3205b5b0-0309-44f4-ba76-6032931c0670)
 
+In the VM running Windows 11 24H2.
 
+![billede](https://github.com/user-attachments/assets/3de60f79-2b7b-4aa3-9645-b4764de4dc61)
 
+Enjoy!
