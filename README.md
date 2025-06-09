@@ -214,7 +214,50 @@ sudo systemctl restart libvirtd
 ```
 
 # Now open Virtual Manager
-And create a new VM
+## i am asuming that you already got a windows 11 iso file.
+
+Create a new VM
+
 ![billede](https://github.com/user-attachments/assets/fe2144ff-2216-4ee4-b4a6-84bb44745bca)
+
+Install from local media file
+
+![billede](https://github.com/user-attachments/assets/f458bd76-a8c2-407f-9744-2c289926b25e)
+
+Browse and find your windows 11 iso file
+
+![billede](https://github.com/user-attachments/assets/b3a45dcc-0561-40b9-93be-71727ab7104b)
+
+Give it minimum of 2gb of memory and 2 cores, but for anything usefull i recommend about half your system resources
+
+![billede](https://github.com/user-attachments/assets/fab7ffbe-c7a1-4a52-8fc9-c221d4cb6dc0)
+
+You need atleast 128gb of storeage for windows 11, but i do recommend 250gb+\
+I also reccomend that you use "select or create custom storeage" to manage where your qcow file goes.\
+but dont exceed your avalible space!
+
+![billede](https://github.com/user-attachments/assets/8873fac8-df45-490d-92a0-c07eb11fb107)
+
+![billede](https://github.com/user-attachments/assets/cb5ae445-7320-4b0f-8a72-b9baea2a0c66)
+
+Give the VM a name, here i called it **win11-guide**\
+Next make sure an tick of "Customize configuration before install"
+
+![billede](https://github.com/user-attachments/assets/0ecac695-7b16-4ba8-88a8-a75e87592334)
+
+Select "CPUs" and set the CPU topology so that you use about half your cores avalible.\
+Also make sure you have TPM set "Emulated" is fine.
+
+![billede](https://github.com/user-attachments/assets/56c0641a-1e3a-4d0e-9bec-139d43f0c758)
+
+# Begin installation
+Now simply press the "Begin installation" button and install windows 11 like you normally would\
+A note is, when your get to account setup, select Coporate/School and setup for domain\
+that way you get to install with a local account, instead of having to create an online MS account.
+
+# When windows 11 installation is done
+
+
+
 
 
