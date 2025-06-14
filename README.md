@@ -317,14 +317,14 @@ Here are some screenshots from Shadow of the Tomb Raider Benchmark running in th
 Both times running 4K Ultra setting, no raytracing.
 
 
-Nativly in Cachyos.
+## Nativly in Cachyos.
 
 ![TR-Cachyos](https://github.com/user-attachments/assets/90d4d2a7-dec7-434c-8ba2-b7b6ef6ee8ff)
 
 
-In the VM running Windows 11 24H2.
+## In the VM running Windows 11 24H2.
 
 ![TR-Windows11](https://github.com/user-attachments/assets/79dfcc92-836d-49d8-96d6-a52608233f3d)
 
 
-Enjoy!
+# Enjoy!
