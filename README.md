@@ -9,7 +9,7 @@ CPU virtualization is enabled in bios.\
 a CPU with integrated grafics eg. Ryzen 7600x.\
 a discrete GPU eg. RX 7900 XT\
 GRUB as bootloader\
-Arch installation with ZEN kernel. (im sure others work, i know Gentoo do...)\
+Arch installation with ZEN kernel. (im sure others work, i know Gentoo do...)
 
 ## My system specs
     ASUS ROG B650E-F Gaming Wifi
@@ -314,14 +314,17 @@ If everything worked, you should see a login screen in the looking glass client
 You can use **SCROLL Lock + F** to go fullscreen
 
 Here are some screenshots from Shadow of the Tomb Raider Benchmark running in the VM and natively on Cachyos\
-Both times running 4K Highst setting, Shadow RayTracing Medium.
+Both times running 4K Ultra setting, no raytracing.
+
 
 Nativly in Cachyos.
 
-![billede](https://github.com/user-attachments/assets/3205b5b0-0309-44f4-ba76-6032931c0670)
+![TR-Cachyos](https://github.com/user-attachments/assets/90d4d2a7-dec7-434c-8ba2-b7b6ef6ee8ff)
+
 
 In the VM running Windows 11 24H2.
 
-![billede](https://github.com/user-attachments/assets/3de60f79-2b7b-4aa3-9645-b4764de4dc61)
+![TR-Windows11](https://github.com/user-attachments/assets/79dfcc92-836d-49d8-96d6-a52608233f3d)
+
 
 Enjoy!
